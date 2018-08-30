@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Eleição</title> 
+</h:head>
+
+<h:body>
+	<h:form>
+	
+	<h:outputLabel value="Informe em quem você deseja votar:" />
+ 	<h:selectOneMenu value="#{eleicaoMB.vote}">
+ 	<f:selectItem itemLabel="-- Selecione --" noSelectionOption="false" />
+ 	<f:selectItem itemLabel="12 – Juir Bolsanato" itemValue="12" />
+ 	<f:selectItem itemLabel="51 – Gerardo Aiquimedo" itemValue="51" />
+ 	<f:selectItem itemLabel="69 – Luiz Quinegócio Molusco da Selva" itemValue="69" />
+ 	</h:selectOneMenu><p/>
+	<h:commandButton value="Votar" action="${eleicaoMB.votar()}"/>
+	<br/> <br/> <br/> <p/><p/><p/>
+	<h:commandButton value="Resultado" action="${eleicaoMB.resultado()}"/>
+	</h:form>
+</h:body>
+</html>
